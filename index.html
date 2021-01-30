@@ -7,10 +7,10 @@
     <title>Flight Booking</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -54,10 +54,13 @@
 
                     <input id="ticket-quantity" type="text" class="inp-style inp-width" value="0">
                 </div>
-                <div class="plus-minus-btn">
-                    <p> <span onclick="firstClassTicket(true)">+</span>
-                        <span onclick="firstClassTicket(false)">-</span>
-                    </p>
+                <div class="btn btn-default">
+                    <button onclick="firstClassTicket(true)" class="btn btn-default">
+                        <i class="fas fa-plus"></i>
+                     </button>
+                     <button onclick="firstClassTicket(false)" class="btn btn-default">
+                        <i class="fas fa-minus"></i>
+                     </button>
                 </div>
             </div>
 
@@ -66,10 +69,13 @@
                     <label for="">Economy ($100)</label>
                     <input id="economyTicket-quantity" type="text" class="inp-style inp-width" value="0">
                 </div>
-                <div class="plus-minus-btn">
-                    <p> <span onclick="economyClassTicket(true)">+</span>
-                        <span onclick="economyClassTicket(false)">-</span>
-                    </p>
+                <div class="btn btn-default">
+                    <button onclick="economyClassTicket(true)" class="btn btn-default">
+                        <i class="fas fa-plus"></i>
+                     </button>
+                     <button onclick="economyClassTicket(false)" class="btn btn-default">
+                        <i class="fas fa-minus"></i>
+                     </button>
                 </div>
             </div>
             <div class="calculations">
@@ -114,6 +120,7 @@
         <!--Thank You-->
 
         <script>
+
             // First Class Ticket
 
             function firstClassTicket(isIncrease) {
@@ -153,7 +160,6 @@
             var totalAmount = 0;
             var vatAmount = 0;
             var grandTotal = 0;
-
             function calculateAmount() {
                 const ticketInput = document.getElementById('ticket-quantity');
                 const ticketCount = parseInt(ticketInput.value);
@@ -178,6 +184,7 @@
                 grandTotalElement.innerHTML = "";
                 grandTotalElement.append("$" + grandTotal);
             }
+ 
         </script>
 
 </body>

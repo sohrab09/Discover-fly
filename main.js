@@ -46,12 +46,6 @@ function calculateAmount() {
     totalAmount = (150 * ticketCount) + (100 * economyTicketCount);
     vatAmount = (totalAmount / 100) * 10;
     grandTotal = totalAmount + vatAmount;
-    calculateShowing()
-}
-
-// Showing Data 
-
-function calculateShowing() {
     const subTotalElement = document.getElementById('subTotal');
     subTotalElement.innerHTML = "";
     subTotalElement.append("$" + totalAmount);
@@ -61,4 +55,21 @@ function calculateShowing() {
     const grandTotalElement = document.getElementById('grandTotal');
     grandTotalElement.innerHTML = "";
     grandTotalElement.append("$" + grandTotal);
+}
+
+// Modal 
+
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 }

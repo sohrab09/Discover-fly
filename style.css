@@ -119,3 +119,47 @@ nav ul li a:hover, a.active{
     display: flex;
     justify-content: space-between;
 }
+
+/* Modal  */
+
+.modal {
+    font-family: 'Potta One', cursive;
+    font-size: 18px;
+    text-align: center;
+    z-index: 1;
+    padding-top: 60px;
+  }
+  
+  .modal-content {
+    position: relative;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    margin: auto;
+    width: 40%;
+    animation-name: animate-top;
+    animation-duration: 0.5s
+  }
+
+  @keyframes animate-top {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  .close {
+    color: green;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 0px 20px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+  }
